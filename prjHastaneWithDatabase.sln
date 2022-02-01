@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prjHastaneWithDatabase", "prjHastaneWithDatabase\prjHastaneWithDatabase.csproj", "{3D81708A-ADD2-43B4-85CC-104F0BE10B98}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D81708A-ADD2-43B4-85CC-104F0BE10B98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D81708A-ADD2-43B4-85CC-104F0BE10B98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D81708A-ADD2-43B4-85CC-104F0BE10B98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D81708A-ADD2-43B4-85CC-104F0BE10B98}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D706C9B-B1EF-4E95-B687-4BD9885558B4}
+	EndGlobalSection
+EndGlobal

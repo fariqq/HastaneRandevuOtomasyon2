@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DBHASTANEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TBLGorevliler">
+          <Key>
+            <PropertyRef Name="GorevliID" />
+          </Key>
+          <Property Name="GorevliID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GorevliAd" Type="nchar" MaxLength="10" />
+          <Property Name="GorevliSoyad" Type="nchar" MaxLength="10" />
+          <Property Name="KullaniciAdi" Type="nchar" MaxLength="10" />
+          <Property Name="Sifre" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="TBLHastalar">
+          <Key>
+            <PropertyRef Name="HastaID" />
+          </Key>
+          <Property Name="HastaID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HastaAd" Type="varchar" MaxLength="50" />
+          <Property Name="HastaSoyad" Type="varchar" MaxLength="50" />
+          <Property Name="HastaTC" Type="varchar" MaxLength="50" />
+          <Property Name="HastaCinsiyet" Type="varchar" MaxLength="50" />
+          <Property Name="HastaDogumYeri" Type="varchar" MaxLength="50" />
+          <Property Name="HastaTelefon" Type="varchar" MaxLength="50" />
+          <Property Name="Poliklinik" Type="varchar" MaxLength="50" />
+          <Property Name="RandevuTarihi" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="DBHASTANEModelStoreContainer">
+          <EntitySet Name="TBLGorevliler" EntityType="Self.TBLGorevliler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLHastalar" EntityType="Self.TBLHastalar" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBHASTANEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TBLGorevliler">
+          <Key>
+            <PropertyRef Name="GorevliID" />
+          </Key>
+          <Property Name="GorevliID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GorevliAd" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="GorevliSoyad" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="KullaniciAdi" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Sifre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TBLHastalar">
+          <Key>
+            <PropertyRef Name="HastaID" />
+          </Key>
+          <Property Name="HastaID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HastaAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HastaSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HastaTC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HastaCinsiyet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HastaDogumYeri" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HastaTelefon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Poliklinik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RandevuTarihi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="DBHASTANEEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TBLGorevliler" EntityType="Self.TBLGorevliler" />
+          <EntitySet Name="TBLHastalar" EntityType="Self.TBLHastalar" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBHASTANEModelStoreContainer" CdmEntityContainer="DBHASTANEEntities">
+          <EntitySetMapping Name="TBLGorevliler">
+            <EntityTypeMapping TypeName="DBHASTANEModel.TBLGorevliler">
+              <MappingFragment StoreEntitySet="TBLGorevliler">
+                <ScalarProperty Name="GorevliID" ColumnName="GorevliID" />
+                <ScalarProperty Name="GorevliAd" ColumnName="GorevliAd" />
+                <ScalarProperty Name="GorevliSoyad" ColumnName="GorevliSoyad" />
+                <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLHastalar">
+            <EntityTypeMapping TypeName="DBHASTANEModel.TBLHastalar">
+              <MappingFragment StoreEntitySet="TBLHastalar">
+                <ScalarProperty Name="HastaID" ColumnName="HastaID" />
+                <ScalarProperty Name="HastaAd" ColumnName="HastaAd" />
+                <ScalarProperty Name="HastaSoyad" ColumnName="HastaSoyad" />
+                <ScalarProperty Name="HastaTC" ColumnName="HastaTC" />
+                <ScalarProperty Name="HastaCinsiyet" ColumnName="HastaCinsiyet" />
+                <ScalarProperty Name="HastaDogumYeri" ColumnName="HastaDogumYeri" />
+                <ScalarProperty Name="HastaTelefon" ColumnName="HastaTelefon" />
+                <ScalarProperty Name="Poliklinik" ColumnName="Poliklinik" />
+                <ScalarProperty Name="RandevuTarihi" ColumnName="RandevuTarihi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
